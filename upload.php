@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
                 // Upload file to server
                 if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)){
                     
-                    // Image db insert sql
+                    // List of items to upload 
                     $insertValuesSQL .= "('".$fileName."', NOW()),";
                 }else{
                     $errorUpload .= $_FILES['files']['name'][$key].', ';
